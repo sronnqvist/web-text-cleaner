@@ -20,7 +20,7 @@ module purge
 module load tensorflow
 
 export BERT_BASE_DIR=models/multi_cased_L-12_H-768_A-12
-OUTPUT_DIR=../junk_classification_data/classify/output/$2
+OUTPUT_DIR=../output/$2
 rm -rf $OUTPUT_DIR
 
 cd bert/
@@ -28,7 +28,7 @@ srun python run_classifier_junk.py \
   --task_name=junk \
   --do_train=false \
   --do_eval=false \
-  --data_dir=../junk_classification_data/classify/tmp/$2 \
+  --data_dir=../tmp/$2 \
   --vocab_file=$BERT_BASE_DIR/vocab.txt \
   --bert_config_file=$BERT_BASE_DIR/bert_config.json \
   --init_checkpoint=$1 \
