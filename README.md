@@ -10,5 +10,5 @@ To classify lines of a document, specify input file, model path and name (for te
 This submits a SLURM job according to the configuration in `test_tmp.sbatch` and predictions are written to `output/SV/test_results.tsv`.
 Predictions and input are combined by `sh compile.sh SV` and written to `output/SV.txt.classified`.
 
-Note: If input is longer than ~100k lines, split the data and run predictions for max 100k lines at a time. For compiling of results see `compile_splits.sh`.
+Note: If input is longer than ~200k lines, split the data and run predictions for max 100k lines at a time. For compiling of results see `compile_splits.sh`.
 
